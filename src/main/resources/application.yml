@@ -22,9 +22,8 @@ central:
   bank:
     url: https://www.cbr.ru/scripts/XML_daily.asp
 
-timer:
-  first: 0 0 7 * * *
-  second: 0 0 19 * * *
+scheduled:
+  timer: 0 0 6,18 * * *
 
 currency:
   rate:
