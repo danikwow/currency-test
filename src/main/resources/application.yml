@@ -1,0 +1,35 @@
+
+spring:
+  jpa:
+    database: h2
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+
+  datasource:
+    url: jdbc:h2:mem:embedded_db
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+
+  liquibase:
+    change-log: classpath:db/changelog-master.yml
+    enabled: true
+
+server:
+  port: 8080
+---
+central:
+  bank:
+    url: https://www.cbr.ru/scripts/XML_daily.asp
+
+timer:
+  first: 0 0 7 * * *
+  second: 0 0 19 * * *
+
+currency:
+  rate:
+    url:  /currency-rate
+
+transaction:
+  url: /transaction
+---

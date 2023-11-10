@@ -1,0 +1,4 @@
+databaseChangeLog:
+  - include:
+      file: db/scripts/2023_09_29_migrations_V1_create_database.sql
+encoding: "UTF-8"
